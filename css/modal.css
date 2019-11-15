@@ -1,0 +1,110 @@
+/* modal animation */
+
+@keyframes bounce {
+    0% { transform: translateY(-2000px);}
+    70% { transform: translateY(30px);}
+    90% { transform: translateY(-10px);}
+    100% { transform: translateY(0);}
+}
+
+.modal__show{
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+
+/* end-code modal animation */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal__show{
+    display: block;
+}
+
+.modal__wrapper {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.modal__input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 260px;
+    margin: 30px auto 0;
+    justify-content: space-between;
+}
+
+.modal__input{
+    margin-bottom: 20px;
+    padding-left: 15px;
+    height: 40px;
+    flex-grow: 1;
+    border: 1px solid #777;
+    border-radius: 4px;
+}
+
+.modal__forgot-pass{
+    color: #333;
+    text-decoration: none;
+}
+
+.modal__subtim {
+    display: block;
+    margin: 20px auto;
+    padding: 0;
+    width: 260px;
+    height: 52px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 17px;
+    color: #fff;
+    background-color: #78c4cd;
+}
+
+.modal__subtim:hover,
+.modal__subtim:focus {
+    background-color: #53d9e9;
+}
+
+@media screen and (min-width: 768px) {
+    .modal__wrapper {
+        width: 566px;
+    }
+    
+    .modal__input-wrapper{
+        width: 350px;
+    }
+
+    .modal__subtim{
+        width: 350px;
+    }
+}
